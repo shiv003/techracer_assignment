@@ -18,19 +18,17 @@ puts "Enter array values for first array"
 index1 = 0
 
 len1.times do |n|
-  arr1[index1] = gets.chomp.to_i
-  index1+= 1 
-end
+  arr1[n] = gets.chomp.to_i
+ end
 
 puts "Enter length of second array"
 len2 = gets.chomp.to_i
 
 puts "Enter array values for second"
-index2 = 0
+
 
 len2.times do |n|
-  arr2[index2] = gets.chomp.to_i
-  index2 += 1
+  arr2[n] = gets.chomp.to_i
 end
 
 arr3 = ob.join(arr1,arr2)
