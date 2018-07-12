@@ -12,11 +12,9 @@ puts "Enter length of array"
 len1 = gets.chomp.to_i
   
 puts "Enter array values for array"
-index1 = 0
-  
+
 len1.times do |n|
-  arr1[index1] = gets.chomp.to_i
-  index1+= 1 
+  arr1[n] = gets.chomp.to_i
 end
 
 arr = ob.double_array(arr1)
