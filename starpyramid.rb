@@ -1,7 +1,6 @@
 class Pyramid
-  def print_star
-    space = 10
-    (0...10).each do |i|
+  def print_star(space)
+    (0...space).each do |i|
       (0..space).each do
         printf " "
       end
@@ -14,5 +13,11 @@ class Pyramid
   end
 end
 
+
+puts "Input size of pyramid to be printed"
+size = gets.chomp.to_i
 p = Pyramid.new
-p.print_star
+p.print_star(size)
+
+
+
