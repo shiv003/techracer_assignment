@@ -1,13 +1,9 @@
 class Print
-  def print
-    i = 1
-    while i<=100
-      puts i
-      i = i+1
-    end 
+  def print_to_100
+    (1..100).each{|i| puts i}
   end
 end
 
 num = Print.new
-num.print
+num.print_to_100
 
