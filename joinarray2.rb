@@ -1,24 +1,13 @@
 class Array
   def join_array(arr1,arr2)
-    
-    arr3=[]
-    arr1_length =  arr1.length
-	  arr2_length =  arr2.length
-    
-    index1 = 0
-    while index1 < arr1_length 
-	    arr3[index1]  = arr1[index1]
-	    index1+=1
-	  end
-   
-    index2 = 0
-    while index1 < arr2_length+arr1_length
-      arr3[index1] = arr2[index2]
-      index1+=1
-      index2+=1
+    arr2_length = arr2.length
+ 
+    arr2_length.times do |val| 
+    arr1.push(arr2[val])
     end
-     return arr3
-  end
+     
+  return arr1
+ end
 end
 
 
