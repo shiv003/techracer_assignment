@@ -1,39 +1,40 @@
-class Array
-  def join_array(arr1,arr2)
-    arr2_length = arr2.length
- 
-    arr2_length.times do |val| 
-    arr1.push(arr2[val])
-    end
-     
-  return arr1
- end
+class Joining_array
+  def join_array(first_arr,second_arr)
+    second_arr.each{|val| first_arr.push(val)}
+   return first_arr
+   end
 end
 
 
-arr1 = []
-arr2 = []
-ob1 = Array.new
+first_arr = []
+second_arr = []
+object = Joining_array.new  
 
 puts "Enter length of first array"
-len1 = gets.chomp.to_i
+first_arr_length = gets.chomp.to_i
+while first_arr_length <= 0 do
+ puts "negative or zero length not allowed"
+ first_arr_length = gets.chomp.to_i
+end
 
 puts "Enter array values for first array"
-
-
-len1.times do |n|
-  arr1[n] = gets.chomp.to_i
+first_arr_length.times do |n|
+  first_arr[n] = gets.chomp.to_i
 end
 
 puts "Enter length of second array"
-len2 = gets.chomp.to_i
-
-puts "Enter array values for second"
-
-len2.times do |n|
-  arr2[n] = gets.chomp.to_i
+second_arr_length = gets.chomp.to_i
+while second_arr_length <= 0 do
+ puts "negative or zero length not allowed"
+ second_arr_length = gets.chomp.to_i
 end
 
-arr3 = ob1.join_array(arr1,arr2)
-puts arr3
+
+puts "Enter array values for second"
+second_arr_length.times do |n|
+  second_arr[n] = gets.chomp.to_i
+end
+
+concat_arr = object.join_array(first_arr,second_arr)
+puts concat_arr
 
