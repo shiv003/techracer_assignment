@@ -1,8 +1,7 @@
 class Array
-  def join(arr1,arr2)
-	  arr3 = arr1.concat(arr2)
-	return arr3
-	end
+  def join(first_arr,second_arr)
+	  first_arr.concat(second_arr)
+  end
 end
 
 
