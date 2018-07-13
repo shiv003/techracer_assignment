@@ -6,32 +6,34 @@ class Array
 end
 
 
-ob=Array.new
+object = Array.new
 
-arr1 = []
-arr2 = []
+first_arr = []
+second_arr= []
 
 puts "Enter length of first array"
-len1 = gets.chomp.to_i
-
+first_arr_length = gets.chomp.to_i
+while first_arr_length <= 0 do
+ puts "negative or zero length not allowed"
+ first_arr_length = gets.chomp.to_i
+end
 puts "Enter array values for first array"
-index1 = 0
-
-len1.times do |n|
-  arr1[n] = gets.chomp.to_i
- end
-
-puts "Enter length of second array"
-len2 = gets.chomp.to_i
-
-puts "Enter array values for second"
-
-
-len2.times do |n|
-  arr2[n] = gets.chomp.to_i
+first_arr_length.times do |n|
+  first_arr[n] = gets.chomp.to_i
 end
 
-arr3 = ob.join(arr1,arr2)
-print arr3
+puts "Enter length of second array"
+second_arr_length = gets.chomp.to_i
+while second_arr_length <= 0 do
+ puts "negative or zero length not allowed"
+ second_arr_length = gets.chomp.to_i
+end
+puts "Enter array values for second"
+second_arr_length.times do |n|
+  second_arr[n] = gets.chomp.to_i
+end
+
+output_arr = object.join(first_arr,second_arr)
+print output_arr
 
 
