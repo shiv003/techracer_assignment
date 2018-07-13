@@ -1,24 +1,27 @@
 class Double
   def double_array(arr)
-    arr1 = arr.map{|n| n*2}
-	return arr1
+   arr.map{|n| n*2}
   end
 end
 
-arr1 = []
+input_array = []
 ob = Double.new
 
 puts "Enter length of array"
-len1 = gets.chomp.to_i
-  
-puts "Enter array values for array"
-
-len1.times do |n|
-  arr1[n] = gets.chomp.to_i
+arr_length = gets.chomp.to_i
+while arr_length <= 0 do
+ puts "negative or zero length not allowed"
+ arr_length = gets.chomp.to_i
 end
 
-arr = ob.double_array(arr1)
-print arr
+puts "Enter array values for array"
+
+arr_length.times do |n|
+  input_array[n] = gets.chomp.to_i
+end
+
+double_arr = ob.double_array(input_array)
+print double_arr
 
 
 
