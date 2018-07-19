@@ -1,8 +1,8 @@
 # your comment
 class JoiningArray
-  def join_array(first_array, second_array)
-    second_array.each { |val| first_array.push(val) }
-    first_array
+  def join_array(first_arr, second_arr)
+    second_arr.each { |val| first_arr.push(val) }
+    first_arr
   end
 end
 LENGTH = /\A\d+\z/
@@ -42,5 +42,5 @@ secondarray_length.to_i.times do |n|
   end
 end
 joinarray_object = JoiningArray.new
-concat_array = joinarray_object.join_array(first_array, second_array)
-print concat_array
+concat_arr = joinarray_object.join_array(first_array, second_array)
+puts concat_arr
