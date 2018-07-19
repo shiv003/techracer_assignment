@@ -1,36 +1,47 @@
 # your comment
-class Array
-  def join(first_arr, second_arr)
-    first_arr.concat(second_arr)
+class Joinarray
+  def join(first_array, second_array)
+    first_array.concat(second_array)
   end
 end
 
-object = []
+LENGTH = /\A\d+\z/
+ARRAY_VALUES = /\A[+-]?\d+(\.[\d]+)?\z/
 
-first_arr = []
-second_arr = []
-
+first_array = []
 puts 'Enter length of first array'
-first_arr_length = gets.chomp.to_i
-while first_arr_length <= 0
- puts 'negative or zero length not allowed'
- first_arr_length = gets.chomp.to_i
+firstarray_length = gets.chomp
+while LENGTH.match(firstarray_length).nil? == true
+  puts 'Invalid input!Please enter a valid input'
+  firstarray_length = gets.chomp
 end
+
 puts 'Enter array values for first array'
-first_arr_length.times do |n|
-  first_arr[n] = gets.chomp.to_i
+firstarray_length.to_i.times do |n|
+  first_array[n] = gets.chomp
+  while ARRAY_VALUES.match(first_array[n]).nil? == true
+    puts 'Invalid input!Please enter a valid input'
+    first_array[n] = gets.chomp
+  end
 end
 
+second_array = []
 puts 'Enter length of second array'
-second_arr_length = gets.chomp.to_i
-while second_arr_length <= 0
- puts 'negative or zero length not allowed'
- second_arr_length = gets.chomp.to_i
-end
-puts 'Enter array values for second'
-second_arr_length.times do |n|
-  second_arr[n] = gets.chomp.to_i
+secondarray_length = gets.chomp
+while LENGTH.match(secondarray_length).nil? == true
+  puts 'Invalid input!Please enter a valid input'
+  secondarray_length = gets.chomp
 end
 
-output_arr = object.join(first_arr, second_arr)
-print output_arr
+puts 'Enter array values for second array'
+secondarray_length.to_i.times do |n|
+  second_array[n] = gets.chomp
+  while ARRAY_VALUES.match(second_array[n]).nil? == true
+    puts 'Invalid input!Please enter a valid input'
+    second_array[n] = gets.chomp
+  end
+end
+
+joinarray_object = Joinarray.new
+output_array = joinarray_object.join(first_array, second_array)
+print output_array
