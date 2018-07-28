@@ -16,5 +16,5 @@ end
 
 puts 'Input size of pyramid to be printed'
 size = gets.chomp.to_i
-printstar_object = Starpyramid.new
-printstar_object.print_star(size)
+star_pyramid = Starpyramid.new
+star_pyramid.print_star(size)
