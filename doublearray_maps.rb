@@ -1,31 +1,31 @@
 # your comment
-class DoublearrayMaps
-  def doubling_array(input_array)
-    input_array.map { |n| n.to_i * 2 }
+class DoubleArray
+  def double(input)
+    input.map { |n| n.to_i * 2 }
   end
 end
 
-input_array = []
+input = []
 
 LENGTH = /\A\d+\z/
-ARRAY_VALUES = /\A[+-]?\d+(\.[\d]+)?\z/
+INPUT_VALUES = /\A[+-]?\d+(\.[\d]+)?\z/
 
 puts 'Enter length of array'
-array_length = gets.chomp
-while LENGTH.match(array_length).nil? == true
+input_length = gets.chomp
+while LENGTH.match(input_length).nil?
   puts 'Invalid input!Please enter a valid input'
-  array_length = gets.chomp
+  input_length = gets.chomp
 end
 
 puts 'Enter array values for array'
-array_length.to_i.times do |n|
-  input_array[n] = gets.chomp
-  while ARRAY_VALUES.match(input_array[n]).nil? == true
+input_length.to_i.times do |n|
+  input[n] = gets.chomp
+  while INPUT_VALUES.match(input[n]).nil? 
     puts 'Invalid input!Please enter a valid input'
-    input_array[n] = gets.chomp
+    input[n] = gets.chomp
   end
 end
 
-double_object = DoublearrayMaps.new
-double_arr = double_object.doubling_array(input_array)
-print double_arr
+double_array = DoubleArray.new
+output = double_array.double(input)
+print output
