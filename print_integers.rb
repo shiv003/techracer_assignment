@@ -1,9 +1,9 @@
 # your comment
 class PrintIntegers
-  def print_to_100
+  def print
     (1..100).each { |i| puts i }
   end
 end
 
-print_object = PrintIntegers.new
-print_object.print_to_100
+print_integers = PrintIntegers.new
+print_integers.print
